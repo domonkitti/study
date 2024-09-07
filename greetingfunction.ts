@@ -1,8 +1,8 @@
 type GreetingProps = {
-    name: string;
-    age: number;
-    format?: "Table" | "text" | "Default"
-  };
+  name: string;
+  age: number;
+  format?: "Table" | "text" | "Default"
+};
 
 // const alice= {
 //     name: "Alice",
@@ -12,8 +12,8 @@ type GreetingProps = {
 
 
 const greeting = ({ name, age, format = "Default" }: GreetingProps): void => {
-    console.table([{ name, age, format }])
-    console.log(`greeting({ name: "${name}", age: ${age}, format: "${format}" })`);
+  console.table( {"Name":name, "Age":age, "Format":format} )
+  console.log(`greeting({ name: "${name}", age: ${age}, format: "${format}" })`);
 }
 
 
